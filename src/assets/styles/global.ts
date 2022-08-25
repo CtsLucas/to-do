@@ -24,4 +24,9 @@ export default createGlobalStyle<{ theme: ThemeType  }>`
     font-weight: 400;
     font-size: 1rem;
   }
+
+  :focus {
+    outline: transparent;
+    box-shadow: 0 0 0 2px ${({ theme }) => theme.colors.primary.main};
+  }
 `;
