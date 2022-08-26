@@ -3,6 +3,7 @@ import defaultTheme from "./assets/styles/themes/default"
 import GlobalStyles from "./assets/styles/global"
 import { Header } from "./components/Header"
 import { Form } from "./components/Form"
+import { List } from "./components/List"
 
 export function App() {
   return (
@@ -10,6 +11,7 @@ export function App() {
       <GlobalStyles />
       <Header />
       <Form />
+      <List />
     </ThemeProvider>
   )
 }
