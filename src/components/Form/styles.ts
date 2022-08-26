@@ -1,7 +1,7 @@
-import styled from "styled-components";
+import styled from "styled-components"
 
 export const Container = styled.div`
-  margin-top: -1.688rem ;
+  margin-top: -1.688rem;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -61,4 +61,4 @@ export const Container = styled.div`
       }
     }
   }
-`;
+`

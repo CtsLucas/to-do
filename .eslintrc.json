@@ -5,7 +5,9 @@
     },
     "extends": [
         "plugin:react/recommended",
-        "standard-with-typescript"
+        "airbnb",
+        "plugin:@typescript-eslint/recommended",
+        "plugin:prettier/recommended"
     ],
     "overrides": [
     ],
@@ -14,8 +16,23 @@
         "sourceType": "module"
     },
     "plugins": [
-        "react"
+      "react",
+      "react-hooks",
+      "@typescript-eslint",
+      "prettier"
     ],
     "rules": {
+      "import/no-unresolved": "error",
+      "import/prefer-default-export": "off",
+      "react/react-in-jsx-scope": "off",
+      "import/extensions": "off",
+      "react/jsx-filename-extension": [
+        1, { "extensions": [".ts",".tsx"] }
+      ]
+    },
+    "settings": {
+      "import/resolver": {
+        "typescript": {}
+      }
     }
 }

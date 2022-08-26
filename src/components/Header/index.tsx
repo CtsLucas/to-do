@@ -1,8 +1,8 @@
-import { Container } from "./styles";
-import logo from "../../assets/images/logo.svg";
+import { Container } from "./styles"
+import logo from "../../assets/images/logo.svg"
 
 export function Header() {
-  return(
+  return (
     <Container>
       <img src={logo} alt="Logotipo do To Do" />
     </Container>
