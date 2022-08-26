@@ -1,6 +1,6 @@
-import {createGlobalStyle, ThemeType} from 'styled-components';
+import { createGlobalStyle, ThemeType } from "styled-components"
 
-export default createGlobalStyle<{ theme: ThemeType  }>`
+export default createGlobalStyle<{ theme: ThemeType }>`
   html {
     @media (max-width: 768px) {
       font-size: 87.5%;
@@ -14,8 +14,8 @@ export default createGlobalStyle<{ theme: ThemeType  }>`
   }
 
   body {
-    background: ${({theme}) => theme.colors.background};
-    color: ${({theme}) => theme.colors.gray[100]};
+    background: ${({ theme }) => theme.colors.background};
+    color: ${({ theme }) => theme.colors.gray[100]};
     -webkit-font-smoothing: antialiased;
   }
 
@@ -29,4 +29,4 @@ export default createGlobalStyle<{ theme: ThemeType  }>`
     outline: transparent;
     box-shadow: 0 0 0 2px ${({ theme }) => theme.colors.primary.main};
   }
-`;
+`
