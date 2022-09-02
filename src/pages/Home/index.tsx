@@ -1,4 +1,3 @@
-import { PlusCircle } from "phosphor-react"
 import {
   ChangeEvent,
   FormEvent,
@@ -7,8 +6,10 @@ import {
   useState,
 } from "react"
 import { v4 as uuidv4 } from "uuid"
+import { PlusCircle } from "phosphor-react"
 import { Task } from "../../components/Task"
 import { Content, Form, Header, List, TaskInfo } from "./styles"
+import { Empty } from "../../components/Empty"
 
 export function Home() {
   const [taskList, setTaskList] = useState([
@@ -37,7 +38,7 @@ export function Home() {
   useEffect(() => {
     setNumberOfTasksCompleted(
       taskList.reduce((accumulator, currentValue) => {
-        if (currentValue.status) {
+        if (currentValue.status === true) {
           return accumulator + 1
         }
 
@@ -90,6 +91,7 @@ export function Home() {
   }
 
   const isNewTaskEmpty = newContentTask.length === 0
+  const isTaskListEmpty = taskList.length === 0
 
   return (
     <>
@@ -120,21 +122,27 @@ export function Home() {
           <TaskInfo type="completed">
             Concluídas
             <span>
-              {numberOfTasksCompleted} de {taskList.length}
+              {isTaskListEmpty
+                ? 0
+                : `${numberOfTasksCompleted} de ${taskList.length}`}
             </span>
           </TaskInfo>
         </Header>
         <Content>
-          {taskList.map((task) => {
-            return (
-              <Task
-                key={task.id}
-                task={task}
-                onDeleteTask={deleteTask}
-                onDoneTask={doneTask}
-              />
-            )
-          })}
+          {isTaskListEmpty ? (
+            <Empty />
+          ) : (
+            taskList.map((task) => {
+              return (
+                <Task
+                  key={task.id}
+                  task={task}
+                  onDeleteTask={deleteTask}
+                  onDoneTask={doneTask}
+                />
+              )
+            })
+          )}
         </Content>
       </List>
     </>
