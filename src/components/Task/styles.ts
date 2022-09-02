@@ -33,6 +33,7 @@ export const Container = styled.div`
   }
 `
 export const Text = styled.p<TaskProps>`
+  flex: 1;
   font-size: 14px;
   font-weight: 400;
   color: ${({ theme }) => theme.colors.gray[100]};
