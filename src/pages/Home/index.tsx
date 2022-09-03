@@ -11,26 +11,27 @@ import { Task } from "../../components/Task"
 import { Content, Form, Header, List, TaskInfo } from "./styles"
 import { Empty } from "../../components/Empty"
 
+interface TaskListProps {
+  id: string
+  content: string
+  status: boolean
+}
+
 export function Home() {
-  const [taskList, setTaskList] = useState([
-    {
-      id: uuidv4(),
-      content:
-        "Integer urna interdum massa libero auctor neque turpis turpis semper. Duis vel sed fames integer.",
-      status: false,
-    },
-    {
-      id: uuidv4(),
-      content:
-        "Mandar mensagem para a advogada e questionar sobre o andamento da PPP.",
-      status: false,
-    },
-    {
-      id: uuidv4(),
-      content: "Ir até o banco desbloquear o cartão.",
-      status: false,
-    },
-  ])
+  const [taskList, setTaskList] = useState<TaskListProps[]>([])
+
+  useEffect(() => {
+    if (taskList.length > 0) {
+      localStorage.setItem("taskList", JSON.stringify(taskList))
+    }
+  }, [taskList])
+
+  useEffect(() => {
+    const data = JSON.parse(localStorage.getItem("taskList") || "[]")
+    if (data) {
+      setTaskList(data)
+    }
+  }, [])
 
   const [newContentTask, setNewContentTask] = useState("")
   const [numberOfTasksCompleted, setNumberOfTasksCompleted] = useState(0)
@@ -88,6 +89,9 @@ export function Home() {
     })
 
     setTaskList(taksListWithoutDeletedOne)
+    if (taskList.length === 1) {
+      localStorage.removeItem("taskList")
+    }
   }
 
   const isNewTaskEmpty = newContentTask.length === 0
