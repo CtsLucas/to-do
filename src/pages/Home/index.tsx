@@ -9,7 +9,7 @@ import { v4 as uuidv4 } from "uuid"
 import { PlusCircle } from "phosphor-react"
 import { Task } from "../../components/Task"
 import { Empty } from "../../components/Empty"
-import { Content, Form, Header, List, TaskInfo } from "./styles"
+import { Content, Form, Header, List, TaskInfo, Container } from "./styles"
 
 interface TaskListProps {
   id: string
@@ -98,7 +98,7 @@ export function Home() {
   const isTaskListEmpty = taskList.length === 0
 
   return (
-    <>
+    <Container>
       <Form>
         <form onSubmit={handleCreateTask}>
           <input
@@ -149,6 +149,6 @@ export function Home() {
           )}
         </Content>
       </List>
-    </>
+    </Container>
   )
 }

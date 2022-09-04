@@ -4,6 +4,10 @@ interface TaskInfoProps {
   type: "created" | "completed"
 }
 
+export const Container = styled.div`
+  padding: 0 1rem;
+`
+
 export const Form = styled.div`
   margin-top: -1.688rem;
   display: flex;
