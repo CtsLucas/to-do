@@ -8,8 +8,8 @@ import {
 import { v4 as uuidv4 } from "uuid"
 import { PlusCircle } from "phosphor-react"
 import { Task } from "../../components/Task"
-import { Content, Form, Header, List, TaskInfo } from "./styles"
 import { Empty } from "../../components/Empty"
+import { Content, Form, Header, List, TaskInfo } from "./styles"
 
 interface TaskListProps {
   id: string
