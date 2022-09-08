@@ -115,5 +115,27 @@ export const TaskInfo = styled.div<TaskInfoProps>`
 export const Content = styled.div`
   width: 100%;
   max-width: 46rem;
+  height: calc(100vh - 25.5rem);
   margin-top: 1.5rem;
+
+  overflow: hidden;
+  overflow-y: auto;
+
+  &:hover {
+    ::-webkit-scrollbar {
+      width: 0.5rem;
+    }
+  }
+
+  ::-webkit-scrollbar-track {
+    background: ${({ theme }) => theme.colors.gray[500]};
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: ${({ theme }) => theme.colors.gray[400]};
+    border-radius: 0.5rem;
+  }
+
+  scrollbar-width: thin;
+  scrollbar-color: ${({ theme }) => theme.colors.gray[700]} transparent;
 `
