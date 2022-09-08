@@ -5,6 +5,7 @@ export default createGlobalStyle<{ theme: ThemeType }>`
     @media (max-width: 768px) {
       font-size: 87.5%;
     }
+    position: relative;
   }
 
   * {
