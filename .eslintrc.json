@@ -28,6 +28,7 @@
       "import/extensions": "off",
       "jsx-a11y/label-has-associated-control": "off",
       "react/jsx-no-bind": "off",
+      "no-use-before-define": "off",
       "react/jsx-filename-extension": [
         1, { "extensions": [".ts",".tsx"] }
       ]
