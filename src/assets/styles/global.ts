@@ -17,6 +17,8 @@ export default createGlobalStyle<{ theme: ThemeType }>`
     background: ${({ theme }) => theme.colors.background};
     color: ${({ theme }) => theme.colors.gray[100]};
     -webkit-font-smoothing: antialiased;
+    position: relative;
+    height: 100vh;
   }
 
   body, input, textarea, button {

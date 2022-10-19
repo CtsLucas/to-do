@@ -12,6 +12,7 @@ export const Container = styled.div`
   padding: 1rem;
   border-radius: 0.5rem;
   gap: 0.75rem;
+  width: calc(100% - 0.5rem);
 
   & > button {
     background: transparent;
@@ -21,6 +22,7 @@ export const Container = styled.div`
 
     &:hover {
       color: ${({ theme }) => theme.colors.danger.main};
+      cursor: pointer;
     }
 
     &:focus {
