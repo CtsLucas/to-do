@@ -5,13 +5,13 @@
 </p>
 
 <h3 align="center">
-  :rocket: Projeto idealizado para estabelecimentos gastronômicos, onde o aplicativo auxilia o garçom no gerenciamento de pedidos. 🚀
+  :rocket: Projeto idealizado para facilitar a organização de tarefas no dia a dia. 🚀
 </h3>
 
 # Descrição
 
 <p align="center">
-  Este produto foi desenvolvido durante o evento "O Poder do JavaScript", ministrado pelo mestre <a href="https://www.linkedin.com/in/mateusilva/">Mateus Silva</a>, foram 5 aulas realizadas, 17 horas de muito conteúdo com uma didática totalmente fora da realidade.
+  Este produto foi desenvolvido com o proposito de cumprir o desafio do 1º modulo da trilha de React da Rocketseat.
 </p>
 
 # :computer: Tecnologias
